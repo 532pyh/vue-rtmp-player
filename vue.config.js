@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 function resolve(dir) {
     return path.resolve(__dirname, dir)
@@ -24,7 +25,12 @@ module.exports = {
         }, 
         output: {
             libraryExport: 'default'
-        }
+        },
+        plugins: [
+            new webpack.ProvidePlugin({
+                'videojs':'video.js'
+            })
+        ]
     },
     chainWebpack: config => {
         config.module
@@ -44,5 +50,5 @@ module.exports = {
         port: 8093,
         hot: true,
         open: 'Google Chrome'
-    }
+    },
 }

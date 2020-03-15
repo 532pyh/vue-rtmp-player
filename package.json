@@ -1,26 +1,29 @@
 {
-    "name": "vue-rtmp-player",
-    "version": "0.1.0",
-    "private": false,
-    "main": "lib/vue-rtmp-player.umd.min.js",
-    "keyword": "vue video.js rtmp player",
-    "description": "基于vue-video-player封装的播放rtmp协议视频流的播放器",
-    "author": "pengyh",
-    "scripts": {
-        "dev": "vue-cli-service serve",
-        "lib": "vue-cli-service build --target lib --name tree-select --dest lib packages/index.js"
-    },
-    "dependencies": {
-        "core-js": "^2.6.5",
-        "vue": "^2.6.10",
-        "vue-router": "^3.0.3"
-    },
-    "devDependencies": {
-        "@vue/cli-plugin-babel": "^3.9.0",
-        "@vue/cli-service": "^3.9.0",
-        "babel-plugin-component": "^1.1.1",
-        "less": "^3.0.4",
-        "less-loader": "^4.1.0",
-        "vue-template-compiler": "^2.6.10"
-    }
+  "name": "vue-rtmp-player",
+  "version": "0.2.0",
+  "private": false,
+  "main": "lib/vue-rtmp-player.umd.min.js",
+  "keyword": "vue video.js rtmp player",
+  "description": "基于video.js封装的播放rtmp协议视频流的播放器",
+  "author": "pengyh",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "lib": "vue-cli-service build --target lib --name tree-select --dest lib packages/index.js"
+  },
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "video.js": "^6.6.0",
+    "videojs-flash": "2.1.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vue-video-player": "^5.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "babel-plugin-component": "^1.1.1",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "vue-template-compiler": "^2.6.10"
+  }
 }
