@@ -1,11 +1,14 @@
 #### vue-rtmp-player组件使用说明
 ##### 安装
 ```
-npm install vue-rtmp-player -s
+npm install vue-rtmp-player -save
+npm install video.js@6.6.0 --save
+npm install videojs-flash@2.1.0 --save
 ````
 #### 使用
 ```
-import vueRtmpPlayer from 'vue-rtmp-player';
+import 'vue-rtmp-player/packages/src/css/custom-theme.css'
+import vueRtmpPlayer from 'vue-rtmp-player/packages/index.js'
 Vue.use(vueRtmpPlayer);
 ```
 ##### Attributes

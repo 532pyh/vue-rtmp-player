@@ -1,8 +1,8 @@
 {
   "name": "vue-rtmp-player",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "private": false,
-  "main": "lib/vue-rtmp-player.umd.min.js",
+  "main": "lib/rtmp-player.umd.min.js",
   "keyword": "vue video.js rtmp player",
   "description": "基于video.js封装的播放rtmp协议视频流的播放器",
   "author": "pengyh",
