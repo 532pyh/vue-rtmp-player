@@ -151,7 +151,8 @@ export default {
             if (this.aspectRatio) {
                 videoOptions.aspectRatio = this.aspectRatio
             }
-            if (src) {
+            if (src !== undefined) {
+                console.log(src)
                 videoOptions.sources = [
                     {
                         type: 'rtmp/mp4',
@@ -159,7 +160,6 @@ export default {
                     },
                 ]
             }
-
             // ios fullscreen
             if (this.playsinline) {
                 this.$refs.video.setAttribute('playsinline', this.playsinline)
@@ -237,6 +237,12 @@ export default {
                     })
                 })
             }
+        },
+        reset() {
+            this.dispose(() => {
+                console.log(this.src)
+                this.initialize('')
+            })
         },
         play() {
             if (this.player) {

@@ -22,13 +22,13 @@ module.exports = {
                 'assets': resolve('examples/assets'),
                 'views': resolve('examples/views'),
             }
-        }, 
+        },
         output: {
             libraryExport: 'default'
         },
         plugins: [
             new webpack.ProvidePlugin({
-                'videojs':'video.js'
+                'videojs': 'video.js'
             })
         ]
     },
@@ -43,6 +43,10 @@ module.exports = {
             .tap(options => {
                 return options
             })
+        config.externals({
+            'vue': 'Vue',
+            'element-ui': 'element-ui',
+        });
     },
     outputDir: 'lib',
     productionSourceMap: false,

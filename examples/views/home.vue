@@ -3,21 +3,14 @@
         <img alt="Vue logo" src="../assets/logo.png" height="50px">
         <div>
             <h4>基于vue-video-player封装的播放rtmp协议视频流的播放器</h4>
-            <vueRtmpPlayer 
-                ref="rtmpPlayer" 
-                class="vjs-custom-skin" 
-                @play="onPlayerPlay($event)" 
-                @pause="onPlayerPause($event)" 
-                @loadeddata="onPlayerLoadeddata($event)" 
-                @waiting="onPlayerWaiting($event)" 
-                @playing="onPlayerPlaying($event)" 
-                @timeupdate="onPlayerTimeupdate($event)" 
-                @ready="playerReadied" 
-                @statechanged="playerStateChanged($event)">
-            </vueRtmpPlayer>
-            <input v-model="src" style="width:400px"/><button @click="handleSetSrc">设置视频源</button></br>
-            <button @click="handlePlay">播放</button>
-            <button @click="handlePause">暂停</button>
+            <!-- <el-button @click="visible = true">Button</el-button>
+            <el-dialog :visible.sync="visible" title="Hello world" @close="handleClose"> -->
+                <vueRtmpPlayer ref="rtmpPlayer" class="vjs-custom-skin" @play="onPlayerPlay($event)" @pause="onPlayerPause($event)" @loadeddata="onPlayerLoadeddata($event)" @waiting="onPlayerWaiting($event)" @playing="onPlayerPlaying($event)" @timeupdate="onPlayerTimeupdate($event)" @ready="playerReadied" @statechanged="playerStateChanged($event)">
+                </vueRtmpPlayer>
+                <input v-model="src" style="width:400px" /><button @click="handleSetSrc">设置视频源</button></br>
+                <button @click="handlePlay">播放</button>
+                <button @click="handlePause">暂停</button>
+            <!-- </el-dialog> -->
         </div>
     </div>
 </template>
@@ -26,18 +19,22 @@ export default {
     name: "home",
     data() {
         return {
-            src:'rtmp://58.200.131.2:1935/livetv/hunantv',
+            visible: false,
+            src: 'rtmp://58.200.131.2:1935/livetv/hunantv',
         }
     },
     methods: {
-        handlePlay(){
+        handlePlay() {
             this.$refs.rtmpPlayer.play();
         },
-        handlePause(){
+        handlePause() {
             this.$refs.rtmpPlayer.pause();
         },
-        handleSetSrc(){
+        handleSetSrc() {
             this.$refs.rtmpPlayer.setSrc(this.src);
+        },
+        handleClose(){
+            this.$refs.rtmpPlayer.reset();
         },
         // 播放回调
         onPlayerPlay(player) {
