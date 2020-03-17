@@ -152,7 +152,6 @@ export default {
                 videoOptions.aspectRatio = this.aspectRatio
             }
             if (src !== undefined) {
-                console.log(src)
                 videoOptions.sources = [
                     {
                         type: 'rtmp/mp4',
@@ -240,7 +239,6 @@ export default {
         },
         reset() {
             this.dispose(() => {
-                console.log(this.src)
                 this.initialize('')
             })
         },
