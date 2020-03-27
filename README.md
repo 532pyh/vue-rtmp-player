@@ -6,11 +6,30 @@ npm install video.js@6.6.0 --save
 npm install videojs-flash@2.1.0 --save
 ````
 #### 使用
+在引入页面中输入以下代码
 ```
 import 'vue-rtmp-player/packages/src/css/custom-theme.css'
 import vueRtmpPlayer from 'vue-rtmp-player/packages/index.js'
 Vue.use(vueRtmpPlayer);
 ```
+#### 引入中文语音
+在引入页面中输入以下代码
+```
+import videojs from 'video.js'
+import 'video.js/dist/lang/zh-CN'
+```
+还要在vue.config.js中增加以下配置
+```
+configureWebpack: {
+    plugins: [
+        new webpack.ProvidePlugin({
+            'videojs': 'video.js'
+        })
+    ]
+}
+```
+
+
 ##### Attributes
 |参数|说明|类型|默认值|示例|
 |----|---|----|------|---|
