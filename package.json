@@ -1,6 +1,6 @@
 {
   "name": "vue-rtmp-player",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": false,
   "main": "lib/rtmp-player.umd.min.js",
   "keyword": "vue video.js rtmp player",
