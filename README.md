@@ -14,6 +14,7 @@ Vue.use(vueRtmpPlayer);
 ##### Attributes
 
 | 参数                 | 说明                                                  | 类型      | 可选值 | 默认值 | 示例 |
+| -------- |-------- |-------- |-------- |-------- |-------- |
 | playsinline          | 移动端是否全屏                                         | Boolean |  | false |
 | height               | 播放器高度                                             | String/Number |  | 360 |
 | fluid                | 播放器是否按比例缩放以适应其容器，为true时，height不起作用 | Boolean | | false |
