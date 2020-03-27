@@ -12,7 +12,6 @@ import vueRtmpPlayer from 'vue-rtmp-player/packages/index.js'
 Vue.use(vueRtmpPlayer);
 ```
 ##### Attributes
-
 |参数|说明|类型|默认值|示例|
 |----|---|----|------|---|
 |playsinline|移动端是否全屏|Boolean|false||
@@ -27,10 +26,24 @@ Vue.use(vueRtmpPlayer);
 |notSupportedMessage|无法播放媒体源时显示的默认信息|String|此视频暂无法播放，请稍后再试||
 |poster| 播放器封面|String|||
 ##### 方法
-| 方法名 | 说明 | 参数 |
-| -------- | -------- | -------- |
-
-
+|方法名|说明|参数|
+|-----|----|----|
+| play | 播放 |  |
+| pause | 暂停 |  |
+| setHeight | 设置播放器高德 | 例如：300 |
+| setVolume | 设置音量 | 0到1的值 |
+| setSrc | 设置播放地址 |  |
+| reset | 重置播放器 |  |
+| dispose | 销毁播放器 |回调函数callback|
 ##### Events
 | 事件名称 | 说明 | 回调参数 |
 | -------- | -------- | -------- | 
+| loadeddata | 播放 | player 播放器实例 |
+| play | 播放 | player 播放器实例|
+| pause | 暂停 | player 播放器实例|
+| waiting | 等待 | player 播放器实例|
+| playing | 播放中 |  player 播放器实例|
+| error | 播放出错 |  player 播放器实例|
+| timeupdate | 当前时间 | time |
+| ready | 播放器就绪 | player 播放器实例|
+| statechanged | 播放器状态改变 |  状态 |
