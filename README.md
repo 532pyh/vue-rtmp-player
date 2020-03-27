@@ -12,6 +12,10 @@ import 'vue-rtmp-player/packages/src/css/custom-theme.css'
 import vueRtmpPlayer from 'vue-rtmp-player/packages/index.js'
 Vue.use(vueRtmpPlayer);
 ```
+模板中这样引用
+```
+<vueRtmpPlayer></vueRtmpPlayer>
+```
 #### 引入中文语音
 在引入页面中输入以下代码
 ```
@@ -28,8 +32,6 @@ configureWebpack: {
     ]
 }
 ```
-
-
 ##### Attributes
 |参数|说明|类型|默认值|示例|
 |----|---|----|------|---|
